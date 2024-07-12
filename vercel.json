@@ -3,12 +3,15 @@
   "builds": [
     {
       "src": "template.js",
-      "use": "@vercel/node"
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/template.js",
+      "headers": {
+        "Content-Type": "text/plain"
+      },
       "dest": "/template.js"
     }
   ]
