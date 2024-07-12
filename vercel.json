@@ -2,16 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "template.js",
-      "use": "@vercel/static"
+      "src": "index.html",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/template.js",
-      "headers": {
-        "Content-Type": "text/plain"
-      },
+      "src": "/(.*)",
       "dest": "/template.js"
     }
   ]
